@@ -16,7 +16,7 @@ This repository is a collection of **machine learning projects**, each focusing 
   ```
   Movie Recommender/
   │── Dataset/               # Contains dataset files
-  │── app.py                 # Main application script
+  │── MovieRecommender.py                 # Main application script
   │── download_files.py      # Script for downloading necessary pkl files
   │── requirements.txt       # Dependencies
   ```
