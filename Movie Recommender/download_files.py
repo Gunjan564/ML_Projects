@@ -1,9 +1,8 @@
 import gdown
 
-# Replace these with your actual Google Drive file IDs
 file_links = {
-    "similarity.zip": "https://drive.google.com/file/d/1Umphlynk-I4_AlJJdgMRebd2clquL0PB/view?usp=drive_link",
-    "new_movies.zip": "https://drive.google.com/file/d/1Wcqf_EGRrIOQVj10xIeTxceVrAzeccrR/view?usp=drive_link"
+    "similarity.pkl": "https://drive.google.com/file/d/1Umphlynk-I4_AlJJdgMRebd2clquL0PB/view?usp=drive_link",
+    "new_movies.pkl": "https://drive.google.com/file/d/1Wcqf_EGRrIOQVj10xIeTxceVrAzeccrR/view?usp=drive_link"
 }
 
 file_1 = "similarity.pkl"

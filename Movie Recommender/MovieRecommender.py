@@ -3,6 +3,7 @@ import pandas as pd
 import pickle
 import requests
 import time
+import gdown
 
 def fetch_poster(movie_id):
     url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key=e5278aaeb91f8e36a3e7f82cd57d9b2d"
@@ -35,6 +36,22 @@ def recommend(movie):
     recommended_movie_names.append(movies.iloc[i[0]].title)
 
   return recommended_movie_names,recommended_movie_posters
+
+# ------------dowloading pkl files---------------
+
+file_links = {
+    "similarity.pkl": "https://drive.google.com/file/d/1Umphlynk-I4_AlJJdgMRebd2clquL0PB/view?usp=drive_link",
+    "new_movies.pkl": "https://drive.google.com/file/d/1Wcqf_EGRrIOQVj10xIeTxceVrAzeccrR/view?usp=drive_link"
+}
+
+file_1 = "similarity.pkl"
+file_2 = "new_movies.pkl"
+gdown.download(f"https://drive.google.com/uc?id=1Umphlynk-I4_AlJJdgMRebd2clquL0PB", file_1, quiet=False)
+print("similarity.pkl Downloaded!!")
+gdown.download(f"https://drive.google.com/uc?id=1Wcqf_EGRrIOQVj10xIeTxceVrAzeccrR", file_2, quiet=False)
+print("new_movies.pkl Dowloaded!!")
+# -----------------------------------------------
+
 
 # Load the processed data
 movies_dict = pickle.load(open(r'new_movies.pkl', 'rb'))
