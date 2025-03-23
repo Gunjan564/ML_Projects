@@ -60,11 +60,11 @@ This repository is a collection of **machine learning projects**, each focusing 
 
 1. Run the project:
    ```bash
-   python app.py
+   python MovieRecommender.py
    ```
 2. If using Streamlit for UI:
    ```bash
-   streamlit run app.py
+   streamlit run MovieRecommender.py
    ```
 3. Interact with the project and analyze results!
 
