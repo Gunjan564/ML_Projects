@@ -6,7 +6,7 @@ df =pickle.load(open(r'Laptop_Price_Prediction\df.pkl','rb'))
 
 st.title("Laptop Predictor")
 company = st.selectbox('Brand',df['Company'].unique())       
-type = st.selectbox('Type',df['TypeName'].unique())              
+type_name = st.selectbox('Type',df['TypeName'].unique())              
 ram = st.selectbox('RAM(in GB)',[2,4,6,8,12,16,24,32,64])
 Weight = st.number_input('Weight of the Laptop')
 touchscreen = st.selectbox('TouchScreen',['No','Yes'])
@@ -30,7 +30,7 @@ if st.button('Predict Price'):
     X_res = int(resolution.split('x')[0])
     Y_res = int(resolution.split('x')[1])
     ppi = ((X_res**2) + (Y_res**2))**0.5/screen_size
-    query = np.array([company,type,ram,touchscreen,ips,ppi,cpu,hdd,ssd,gpu,os])
+    query = np.array([company,type_name,ram,os,Weight,touchscreen,ppi,ips,cpu,hdd,ssd,gpu])
     query = np.array(query, dtype=object)
 
     query = query.reshape(1,11)
