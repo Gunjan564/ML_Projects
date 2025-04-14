@@ -21,8 +21,29 @@ This repository is a collection of **machine learning projects**, each focusing 
   │── requirements.txt       # Dependencies
   ```
 
-### 2. *(More projects to be added, such as classification, regression, computer vision, NLP, etc.)*
+### 2. Laptop Price Prediction (Regression Models)
 
+- Built a **regression-based pipeline** to predict laptop prices based on hardware specifications.
+- Performed detailed **feature engineering**, such as:
+- Extracting clock speed from CPU names
+- Standardizing and converting storage values
+- Used a `ColumnTransformer` to manage both numerical and categorical preprocessing.
+- Trained and compared several models:
+- Linear Regression
+- Ridge Regression
+- Decision Tree
+- Random Forest (best performer with r² ≈ 0.81)
+- XGBoost
+- Voting and Stacking Regressors
+- **Dataset:** Sourced from **Kaggle**.
+- Project files are structured as follows:
+```
+Laptop Price Predictor/ 
+│── dataset.csv # Raw dataset 
+│── Laptop_Price_Predictor.ipynb # Main notebook 
+│── model_comparison.png # Visual comparison of model scores 
+│── requirements.txt # Dependencies
+```
 ## Features
 
 - Multiple machine learning techniques implemented
